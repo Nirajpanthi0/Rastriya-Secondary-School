@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import dummy from '../../../public/images/dummy.png';
 const   Team = () => {
   const [showMore, setShowMore] = useState(false);
 
@@ -18,21 +18,21 @@ const   Team = () => {
               <ImageBox
                 size="large"
                 names={["Principal", "Prashant Bhushal"]}
-                imageUrl="https://www.realtechnirman.com/wp-content/uploads/2017/02/man-dummy.jpg"
+                imageUrl={dummy}
               />
             </div>
             <div className="col-span-2 lg:col-span-1">
               <ImageBox
                 size="large"
                 names={["Vice Principal", "Niraj Panthi"]}
-                imageUrl="https://www.realtechnirman.com/wp-content/uploads/2017/02/man-dummy.jpg"
+                imageUrl={dummy}
               />
             </div>
             {showMore && (
               <>
-                <ImageBox size="small" names={["Teacher", "Krishna Dev Khanal"]} imageUrl="https://www.realtechnirman.com/wp-content/uploads/2017/02/man-dummy.jpg" />
-                <ImageBox size="small" names={["Teacher", "Ram Dev Khanal"]} imageUrl="https://www.realtechnirman.com/wp-content/uploads/2017/02/man-dummy.jpg" />
-                <ImageBox size="small" names={["Teacher", "Hari Ram"]} imageUrl="https://www.realtechnirman.com/wp-content/uploads/2017/02/man-dummy.jpg" />
+                <ImageBox size="small" names={["Teacher", "Krishna Dev Khanal"]} imageUrl={dummy} />
+                <ImageBox size="small" names={["Teacher", "Ram Dev Khanal"]} imageUrl={dummy} />
+                <ImageBox size="small" names={["Teacher", "Hari Ram"]} imageUrl={dummy} />
               </>
             )}
           </div>
