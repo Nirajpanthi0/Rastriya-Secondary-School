@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -5,6 +6,11 @@ import { createAxiosInstance } from '../../utils/axiosinstance'; // Adjust the i
 
 const Team = () => {
   const [team, setTeam] = useState([]);
+=======
+import React, { useState } from "react";
+import dummy from '../../../public/images/dummy.png';
+const   Team = () => {
+>>>>>>> 37a93023c6423eac90b57b292476848379caa512
   const [showMore, setShowMore] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: false, // Only trigger once when component comes into view
@@ -29,10 +35,48 @@ const Team = () => {
     setShowMore(!showMore);
   };
 
+<<<<<<< HEAD
   const variants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 },
   };
+=======
+  return (
+    
+    <div className="py-12 px-4 sm:px-6 lg:px-8">
+       <h1 className="text-3xl font-bold mb-4 text-center">Team</h1>
+      <div className="max-w-7xl mx-auto bg-white w-10/12 flex justify-center items-center rounded-[30px]">
+        <div className="w-full flex flex-col items-center py-6 px-2 sm:px-4 md:px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+            <div className="col-span-2 lg:col-span-1">
+              <ImageBox
+                size="large"
+                names={["Principal", "Prashant Bhushal"]}
+                imageUrl={dummy}
+              />
+            </div>
+            <div className="col-span-2 lg:col-span-1">
+              <ImageBox
+                size="large"
+                names={["Vice Principal", "Niraj Panthi"]}
+                imageUrl={dummy}
+              />
+            </div>
+            {showMore && (
+              <>
+                <ImageBox size="small" names={["Teacher", "Krishna Dev Khanal"]} imageUrl={dummy} />
+                <ImageBox size="small" names={["Teacher", "Ram Dev Khanal"]} imageUrl={dummy} />
+                <ImageBox size="small" names={["Teacher", "Hari Ram"]} imageUrl={dummy} />
+              </>
+            )}
+          </div>
+          <button
+  className="mt-4 px-4 py-2 bg-white text-black border border-black rounded"
+  onClick={handleShowMore}
+>
+  {showMore ? "Show Less" : "Show More"}
+</button>
+>>>>>>> 37a93023c6423eac90b57b292476848379caa512
 
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8">
