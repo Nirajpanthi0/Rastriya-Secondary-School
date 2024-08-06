@@ -22,7 +22,7 @@ const marqueeVariants = {
 const Marquee = () => {
   return (
     <div>
-      <div className="marquee bg-slate-100 ">
+      <div className="marquee h-60 bg-slate-100 ">
                 {/* 3. Using framer motion */}
         <motion.div
           className="track"

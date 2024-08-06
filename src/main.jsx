@@ -12,7 +12,10 @@ import ImageDummy from "./Component/resultpage/ImageDummy";
 import "./index.css";
 import Credit from "./Component/pages/credit";
 import Noticedital from "./Component/pages/noticedital";
-
+import AdminLayout from "./admin/home";
+import AdminGallery from "./admin/Gallery";
+import TeamPage from "./admin/TeamPage";
+import NoticePage from "./admin/NoticePage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -47,10 +50,31 @@ const router = createBrowserRouter([
       {
         path: "higherlevel",
         element: (
-          <ImageDummy
-            imageUrl="https://via.placeholder.com/600x400"
-            text="Higher Level"
-          />
+          <ImageDummy />
+        ),
+      },
+      {
+        path: "admin",
+        element: (
+          <AdminLayout/>
+        ),
+       }, 
+       {
+        path: "admin/gallery",
+        element: (
+          <AdminGallery/>
+        ),
+      },
+       {
+        path: "admin/team",
+        element: (
+          <TeamPage/>
+        ),
+      },
+       {
+        path: "admin/notice",
+        element: (
+          <NoticePage/>
         ),
       },
     ],

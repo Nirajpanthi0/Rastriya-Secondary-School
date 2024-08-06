@@ -7,27 +7,27 @@ const About = () => {
 
     <div className="w-screen flex flex-col items-center bg-slate-100">
       <div className="w-full max-w-screen-lg px-5 md:px-10">
-        <div className="flex flex-col md:flex-row items-center mt-28 bg-slate-100">
-          <div className="md:w-1/2 text-left md:pr-10">
+        <div className="flex flex-col md:flex-row items-center mt-28 h-96 my-12 bg-slate-100">
+          <div className="md:w-1/2 h-96 text-left md:pr-10">
             <h2 className="text-2xl font-bold mb-4">Rastriya Secondary School</h2>
-            <p className="text-lg mb-4">
+            <p className="text-md mb-4">
               Rastriya Secondary School, one of the oldest and pioneer schools in Nepal, was first founded as co-educational school at Narayansthan, Nadipur, Pokhara-3 on 
               <strong>20th Mangshir, 2006 (5th December, 1949)</strong>. Now it is located in a peaceful location at Pokhara-1, Purano Tundikhel with extended classes under the affiliation of National Education Board (10+2) in Science, Management, Humanities and Education Streams since 2054 B.S.
               The school Premises extends in an open area of 72 ropanies of land. The school is easily accessible from any part(s) of valley.
               <strong>Rastriya Secondary School</strong> is an institution with a glorified heritage, excellent programmes and distinguished faculty members. Since its establishment, it has been giving best to be an academic institution for all the students of different economic backgrounds.
             </p>
           </div>
-          <div className="md:w-1/2 flex justify-center">
+          <div className="md:w-1/2 h-96 flex  justify-center">
             <img src={banner} alt="Rastriya Secondary School" className="w-full max-w-md rounded-lg shadow-lg" />
           </div>
         </div>
         
         <div className="flex flex-col md:flex-row items-center py-10">
-          <div className="md:w-1/2 flex justify-center mb-10 md:mb-0">
+          <div className="md:w-1/2 h-96 flex justify-center mb-10 md:mb-0">
             <img src={banner} alt="Rastriya Secondary School" className="w-full max-w-md rounded-lg shadow-lg" />
           </div>
-          <div className="md:w-1/2 text-left md:pl-10">
-            <p className="text-lg mb-4">
+          <div className="md:w-1/2 h-96 flex flex-col items-center justify-center text-left md:pl-10">
+            <p className="text-md mb-4">
               By providing quality education at free of cost up-to class 10 and at nominal fees for 10+2, it has been growing its name and fame all over the nation. 
               The school is highly dedicated to impart quality education to its students and to enable them to shape their future independently. 
               Rastriya Secondary School combines intimacy with a strong academic work and mutual support. 
@@ -38,12 +38,12 @@ const About = () => {
         </div>
 
         <div className="text-black p-4">
-          <h1 className="text-2xl font-bold">The Belief</h1>
+          <h1 className="text-2xl text-center font-bold">The Belief</h1>
         </div>
         
         <div className="flex flex-col md:flex-row items-center py-10">
           <div className="md:w-1/2 text-left md:pr-10">
-            <p className="text-lg mb-4">
+            <p className="text-md mb-4">
               Quality education is such that it contributes significantly not only to acquiring certificates but also to producing efficient human power. Private educational institutes often charge high fees, which are unaffordable for students from low economic backgrounds. Rastriya Secondary School believes that education must be provided at nominal fees so that no one is deprived of their fundamental right to acquire education.
             </p>
           </div>
@@ -58,10 +58,10 @@ const About = () => {
         
         <div className="flex flex-col md:flex-row items-center py-10">
           <div className="md:w-1/2 text-left md:pr-10">
-            <p className="text-lg mb-4">
+            <p className="text-md mb-4">
               Beside employing highly qualified, experienced teachers and equally efficient non-teaching staff, Rastriya Secondary School has developed the following physical and organizational infrastructures for effective academic operation:
             </p>
-            <ul className="list-disc pl-6">
+            <ul className="list-disc text-md pl-6">
               <li>Well-furnished, spacious classrooms.</li>
               <li>Well-managed resourceful E-library.</li>
               <li>Well-equipped laboratories for science disciplines.</li>

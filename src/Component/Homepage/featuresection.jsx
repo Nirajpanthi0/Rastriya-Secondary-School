@@ -1,9 +1,33 @@
-import React from "react";
+
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const FeatureSection = () => {
+  const { ref: ref1, inView: inView1 } = useInView({
+    triggerOnce: false, // Only trigger once when component comes into view
+    threshold: 0.5, // Trigger animation when 50% of component is visible
+  });
+
+  const { ref: ref2, inView: inView2 } = useInView({
+    triggerOnce: false,
+    threshold: 0.5,
+  });
+
+  const variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
-    <div className="flex flex-col sm:flex-row justify-center sm:justify-between gap-8 sm:gap-x-10 mx-2 sm:mx-auto max-w-5xl">
-      <div className="bg-white shadow-lg rounded-lg overflow-hidden flex-1">
+    <div className=" flex-col flex sm:flex-row justify-center sm:justify-between gap-8 sm:gap-x-10 mx-2 sm:mx-auto max-w-5xl">
+      <motion.div
+        ref={ref1}
+        initial="hidden"
+        animate={inView1 ? "visible" : "hidden"}
+        variants={variants}
+        transition={{ duration: 0.5 }}
+        className="bg-white shadow-lg rounded-lg overflow-hidden flex-1"
+      >
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">Special Features</div>
           <p className="text-gray-700 text-base">
@@ -16,9 +40,16 @@ const FeatureSection = () => {
             and more.
           </p>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="bg-white shadow-lg rounded-lg overflow-hidden flex-1 mt-8 sm:mt-0">
+      <motion.div
+        ref={ref2}
+        initial="hidden"
+        animate={inView2 ? "visible" : "hidden"}
+        variants={variants}
+        transition={{ duration: 0.5 }}
+        className="bg-white shadow-lg rounded-lg overflow-hidden flex-1 mt-8 sm:mt-0"
+      >
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">The Belief</div>
           <p className="text-gray-700 text-base">
@@ -31,7 +62,7 @@ const FeatureSection = () => {
             education.
           </p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
